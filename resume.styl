@@ -1,0 +1,138 @@
+html
+body
+   font-family: helvetica, "游ゴシック体", "Hiragino Sans GB", "Microsoft Yahei Light", "Microsoft YaHei", "WenQuanYi Micro Hei", lucida, sans-serif;
+   margin: 0
+   padding: 0
+
+
+@media print
+  .song
+    song()
+
+
+song()
+  font-family: Georgia,"Times New Roman","FangSong","仿宋","STFangSong", "华文仿宋",serif
+
+
+*
+  box-sizing: border-box;
+.container
+  position: relative
+  width:210mm
+  height: 297mm
+  margin: auto
+  overflow: hidden
+  padding: 0rem 2rem
+.header
+  position: relative 
+  display: flex
+  .left
+  .right
+    flex: 1;
+  .left
+    song()
+  
+  .right
+    text-align: right;
+    p
+      margin: 8px 0
+    a
+      color: black
+      text-decoration: none
+      border-bottom 1px solid white
+      &:hover
+        border-bottom 1px solid #fff500
+.name 
+  font-size: 3em
+  song()
+  margin-bottom: 16px
+.role
+  font: 600 24px "Fangsong","simsun";
+
+
+[class^='i-']
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat
+  vertical-align: bottom;
+  margin-left: .5em
+.i-phone
+  background-image: url(icon/phone.png) ;
+.i-email
+  background-image: url(icon/email.png) ;
+.i-home
+  background-image: url(icon/home.svg) ;
+.i-blog
+  background-image: url(icon/rss.svg) ;
+.i-qq
+  background-image: url(icon/qq.png) ;
+
+
+.box
+  position: relative
+  .title
+    h2
+      color: white
+      background-color: black;
+      //font-weight: 400
+      padding: .3em .6em;
+      margin: 0
+//    project
+ul.projects
+  position: relative
+  padding-left: 0
+  list-style: none
+  li
+    position: relative
+  .time
+    position: absolute
+    width: 160px
+    left: 5px
+    top: 3px
+  .words
+    margin-left: 160px
+    h3
+      font-weight: 400
+ul.details
+  padding-left: 0
+  list-style: none
+
+//////////////////////////////////  
+//     skills
+///////////////////////
+.skill-dir
+  display: flex
+  border: 1px solid black
+  padding: 0 3px 3px
+  h4
+    flex: 1;
+    margin: 0
+.skill-list
+  display: flex
+  .backEnd
+  .frontEnd
+    flex: 1;
+    b
+      font-weight: 500
+      border-bottom: 2px solid gray
+      padding-bottom: 1px
+    p
+      margin: 3px 0
+
+
+.right.aligned
+  text-align: right
+
+//////////////////////////////
+//    thanks
+////////////////////////////
+.thanks
+  position: absolute
+  width: 100%;
+  text-align: center
+  bottom: 1em
+  song()

@@ -1,0 +1,29 @@
+{
+  "who": {
+    "name": "陶楷",
+    "gender": "男",
+    "birth": 1995,
+    "phone": "18883992128",
+    "qq": "625608852",
+    "email": "mr.taokai@foxmail.com",
+    "blog": "vankai.github.io",
+    "other":"本科 应届毕业生"
+  },
+  "applyfor":{
+    "job":"前端工程师",
+    "city":"成都"
+  },
+  "educations": [{
+    "school": "重庆邮电大学",
+    "major": "软件工程专业",
+    "begin": "2014.8",
+    "end": "2018.6",
+    "type":"本科"
+  }],
+  "jobs": [{
+
+  }],
+  "projects": {
+
+  }
+}

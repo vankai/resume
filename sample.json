@@ -1,0 +1,124 @@
+{
+  "settings": {
+    "icons": true
+  },
+  "name": "陶楷",
+  "bio_data": {
+    "website": "heitaov.cn",
+    "blog": "vankai.github.io",
+    "email": "mr.taokai@foxmail.com",
+    "phone": "(+86) 1888-399-2128",
+    "gender": "男",
+    "tag": "本科 2018应届毕业生",
+    "age": 22,
+    "summary": {
+      "points": [
+        "ENFJ-A，喜欢看书。",
+        "高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧，喜欢字体以及其他手工艺作品。",
+        "个人博客如果无法访问，可以访问tomato3.coding.net，博客内容暂未开始更新，主要是想写一些「长半衰期」的文章，而不是像老太太裹脚布一样的技术备忘录。"
+      ]
+    },
+    "github_projects": {
+      "details": [{
+          "project_name": "hexo-theme-ambition",
+          "tagline": "",
+          "description": [
+            "Wrote a ruby gem _Morsel_ to traverse through active record trees to purge old records. It helped in limiting the production database size and keeping the data clean."
+          ]
+        },
+        {
+          "project_name": "prat0318/gitator",
+          "tagline": "Live at [Gitator.com](http://gitator.com)",
+          "description": [
+            "Finds relevant repositories based on an user's GitHub profile.",
+            "Written in Ruby on Sinatra and uses Github's Octokit gem"
+          ]
+        },
+        {
+          "project_name": "prat0318/json_resume",
+          "tagline": "Convert JSON data to pretty resumes in .html, .tex, .md",
+          "description": [
+            "Static personal page and resume design using Mustache.",
+            "Current resume is generated using json_resume."
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "frontEnd": [
+        "掌握 Javascript/HTML5/CSS3 ，能熟练使用原生 Javascript 开发应用",
+        "了解 jQuery/Requirejs 等库文件",
+        "了解 less/stylus/pug 预编译工具",
+        "了解 gulp/bower 构建工具",
+        "能够对前端页面进行性能优化",
+        "了解 简单安卓程序开发",
+        "了解 Progressive Web Application 技术",
+        "了解 git/linux 日常操作"
+
+      ],
+      "backEnd": [
+        "了解 Nodejs/JAVA",
+        "了解 Express/Struts2",
+        "了解 MySQL/MongoDB",
+        "了解 HTTP/TCP/WebSocket 协议"
+      ],
+      "others": [
+        "git/linux 常用操作",
+        "简单安卓程序开发",
+        "CET-4, 可阅读英文技术教程。"
+      ]
+    },
+    "education": {
+      "show_gpa": false,
+      "schools": [{
+        "degree": "本科毕业生",
+        "major": "软件工程专业",
+        "institution": "重庆邮电大学",
+        "first_year": 2014,
+        "first_month": 9,
+        "graduation_year": 2018,
+        "graduation_month": 6,
+        "gpa": "8.91/10"
+      }]
+    },
+    "acad_achievements": {
+      "items": [
+        "2016.07    2016伯乐相“码”大陆集团首届代码优化大赛 优秀奖",
+        "2014.07    全（重庆）市大学生“中华魂”读书活动征文比赛二等奖"
+      ]
+    },
+    "experience": {
+      "items": [{
+        "title": "Hexo主题-ambition",
+        "from": "2016.10",
+        "to": "2017.01",
+        "details": [
+          "其他的hexo主题自己不是很喜欢，所以就自己写了一个。使用了ServiceWorker增强离线体验，练习了stylus。可访问我的博客查看。"
+        ]
+      }, {
+        "title": "嗨柚义工旅行官方网站",
+        "from": "2016.03",
+        "to": "2016.07",
+        "details": [
+          "使用jQuery/RequireJS完成网站开发。第一周，我负责切图，第二周参与交互逻辑的开发与调试，第三周结束时网站上线测试并调试api。第四周，将原本的PC端网站改为响应式网站。后续又在登录页添加QQ互联接口。"
+        ],
+        "technology_used": {
+          "tools": [
+            "Requirejs",
+            "jQuery",
+            "Artemplate.js"
+          ]
+        }
+      }]
+    },
+    "other_projects": {
+      "items": [{
+        "headline": "Designed product _Omerta_, a multi-user chat room application in j2me using Sun Wireless Toolkit platform.",
+        "points": [
+          "Was awarded 1<sup>st</sup> position for the product in [Envision](http://www.ecell-iitkgp.org/envision.php), Product Innovation Contest, IIT KGP.",
+          "Was awarded 1<sup>st</sup> position for the product in Javawise, J2ME s/w Development Contest at IIT Kharagpur, 2008 and 2009 continuously."
+        ]
+      }]
+    }
+  }
+}

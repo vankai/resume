@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title 陶楷 | 简历
+  link(href="index.css", rel="stylesheet")
+-var school = bio_data.education.schools[0];
+
+body
+  .container
+    .header
+      .left
+        h1.name #{name} 
+        p #{bio_data.gender} #{bio_data.age} | #{bio_data.tag}
+        p #{school.institution}·#{school.major}
+      .right
+        h2.role Web前端工程师
+        p
+          a(href="//"+bio_data.website) #{bio_data.website}
+            i.i-home
+        p 
+          a(href="//"+bio_data.blog) #{bio_data.blog}
+            i.i-blog
+        p #{bio_data.phone}
+          i.i-phone 
+        p 
+          a(href="mailto:"+bio_data.email) #{bio_data.email}
+            i.i-email 
+    .project.box
+      .title 
+        h2 项目经历
+      ul.content.projects
+        each project in bio_data.experience.items
+          li
+            .time #{project.from} - #{project.to}
+            .words
+              h3 #{project.title}
+              ul.details.song 
+                each detail in project.details
+                  li #{detail}
+    .skill.box
+      .title 
+        h2 个人技能
+      .content.song
+        .skill-dir
+          h4 前端
+          h4.right.aligned 后台
+        .skill-list
+          .frontEnd
+            each skill in bio_data.skills.frontEnd
+              p!= skill  
+          .backEnd
+            each skill in bio_data.skills.backEnd
+              p.right.aligned!= skill  
+      
+    .award.box
+      .title 
+        h2 获奖情况
+      .content.song
+      each award in bio_data.acad_achievements.items
+        p.song=award
+      
+    .judge.box
+      .title 
+        h2 自我评价
+      .content.song
+        p ENFJ-A，喜欢看书，CET-4，可流畅阅读英文技术教程。高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧。以一个手艺人的心态去设计与开发，梦想成为航天器工程师。
+      
+    h2.thanks.song 感谢您花时间阅读我的简历，期待能有机会和您共事。
+      
