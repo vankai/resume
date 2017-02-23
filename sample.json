@@ -47,7 +47,7 @@
     "skills": {
       "frontEnd": [
         "掌握 Javascript/HTML5/CSS3 ，能熟练使用原生 Javascript 开发应用",
-        "了解 jQuery/Requirejs 等库文件",
+        "了解 jQuery/RequireJS 等库文件",
         "了解 less/stylus/pug 预编译工具",
         "了解 gulp/bower 构建工具",
         "能够对前端页面进行性能优化",

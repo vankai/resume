@@ -4,14 +4,17 @@ body
    margin: 0
    padding: 0
 
+song()
+  font-family: Georgia,"Times New Roman","FangSong","仿宋","STFangSong", "华文仿宋",serif
+
+
+
 
 @media print
   .song
     song()
-
-
-song()
-  font-family: Georgia,"Times New Roman","FangSong","仿宋","STFangSong", "华文仿宋",serif
+  .screen-only
+    display: none
 
 
 *
@@ -61,9 +64,9 @@ song()
   vertical-align: bottom;
   margin-left: .5em
 .i-phone
-  background-image: url(icon/phone.png) ;
+  background-image: url(icon/phone.svg) ;
 .i-email
-  background-image: url(icon/email.png) ;
+  background-image: url(icon/email.svg) ;
 .i-home
   background-image: url(icon/home.svg) ;
 .i-blog
@@ -136,3 +139,8 @@ ul.details
   text-align: center
   bottom: 1em
   song()
+
+.languages
+  text-align: right
+  a
+    color #03A9F4

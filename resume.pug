@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-html(lang="en")
-head
-  meta(charset="UTF-8")
-  title 陶楷 | 简历
-  link(href="index.css", rel="stylesheet")
--var school = bio_data.education.schools[0];
-
+html(lang="zh")
+  head
+    link(rel="shortcut icon" href="favicon.png" type="image/x-icon" )
+    meta(charset="UTF-8")
+    title 陶楷 | 简历
+    link(href="index.css", rel="stylesheet")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
 body
   .container
+    .languages.screen-only
+      a(href="index.html") 中文
+      =" "
+      a(href="index-en.html") English
     .header
       .left
         h1.name #{name} 
         p #{bio_data.gender} #{bio_data.age} | #{bio_data.tag}
+        -var school = bio_data.education.schools[0];
         p #{school.institution}·#{school.major}
       .right
         h2.role Web前端工程师
         p
-          a(href="//"+bio_data.website) #{bio_data.website}
+          a(href="//"+bio_data.website target="_blank") #{bio_data.website}
             i.i-home
         p 
-          a(href="//"+bio_data.blog) #{bio_data.blog}
+          a(href="//"+bio_data.blog target="_blank") #{bio_data.blog}
             i.i-blog
         p #{bio_data.phone}
           i.i-phone 
@@ -67,4 +72,12 @@ body
         p ENFJ-A，喜欢看书，CET-4，可流畅阅读英文技术教程。高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧。以一个手艺人的心态去设计与开发，梦想成为航天器工程师。
       
     h2.thanks.song 感谢您花时间阅读我的简历，期待能有机会和您共事。
-      
+
+  
+  script.
+    if('serviceWorker' in navigator){
+      if(window.location.protocol ==="https:" || window.location.hostname ==="localhost" && window.location.hash === "#sw"){
+         navigator.serviceWorker.register('./sw.js');
+      }
+    }
+  

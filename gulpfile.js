@@ -25,7 +25,9 @@ gulp.task('stylus', function () {
   return gulp
     .src('./resume.styl')
     .pipe(plumber())
-    .pipe(stylus())
+    .pipe(stylus({
+      compress:true
+    }))
     .pipe(rename('index.css'))
     .pipe(gulp.dest('./'))
     .pipe(reload({stream: true}));
@@ -34,7 +36,7 @@ gulp.task('stylus', function () {
 gulp.task('browser-sync', function () {
   browserSync.init({
     notify: false,
-    port: 9000,
+    port: 9002,
     server: {
       baseDir: ['./']
     }
