@@ -6,7 +6,8 @@ var plumber = require('gulp-plumber');
 
 var browserSync = require('browser-sync').create();;
 var reload = browserSync.reload;
-var resumeData = require('./sample.json');
+
+var chineseR= require('./chinese.json');
 
 gulp.task('html', function buildHTML() {
   return gulp
@@ -14,7 +15,7 @@ gulp.task('html', function buildHTML() {
     .pipe(plumber())
     .pipe(pug({
       // Your options in here.
-      data: resumeData
+      data: chineseR
     }))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('./'))
