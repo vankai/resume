@@ -1,8 +1,11 @@
 {
+    "language":"zh",
   "settings": {
     "icons": true
   },
+  "page_title": "陶楷 | 简历",
   "name": "陶楷",
+  "apply_for": "Web前端工程师",
   "bio_data": {
     "website": "heitaov.cn",
     "blog": "vankai.github.io",
@@ -10,40 +13,14 @@
     "phone": "(+86) 1888-399-2128",
     "gender": "男",
     "tag": "本科 2018应届毕业生",
-    "age": 22,
+    "birth_year":1995,
     "summary": {
       "points": [
-        "ENFJ-A，喜欢看书。",
-        "高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧，喜欢字体以及其他手工艺作品。",
-        "个人博客如果无法访问，可以访问tomato3.coding.net，博客内容暂未开始更新，主要是想写一些「长半衰期」的文章，而不是像老太太裹脚布一样的技术备忘录。"
+        "ENFJ-A，喜欢看书，CET-4，可流畅阅读英文技术教程。高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧。",
+        "以一个手艺人的心态去设计与开发，梦想成为航天器工程师。"
       ]
     },
-    "github_projects": {
-      "details": [{
-          "project_name": "hexo-theme-ambition",
-          "tagline": "",
-          "description": [
-            "Wrote a ruby gem _Morsel_ to traverse through active record trees to purge old records. It helped in limiting the production database size and keeping the data clean."
-          ]
-        },
-        {
-          "project_name": "prat0318/gitator",
-          "tagline": "Live at [Gitator.com](http://gitator.com)",
-          "description": [
-            "Finds relevant repositories based on an user's GitHub profile.",
-            "Written in Ruby on Sinatra and uses Github's Octokit gem"
-          ]
-        },
-        {
-          "project_name": "prat0318/json_resume",
-          "tagline": "Convert JSON data to pretty resumes in .html, .tex, .md",
-          "description": [
-            "Static personal page and resume design using Mustache.",
-            "Current resume is generated using json_resume."
-          ]
-        }
-      ]
-    },
+
     "skills": {
       "frontEnd": [
         "掌握 Javascript/HTML5/CSS3 ，能熟练使用原生 Javascript 开发应用",
@@ -113,12 +90,21 @@
     },
     "other_projects": {
       "items": [{
-        "headline": "Designed product _Omerta_, a multi-user chat room application in j2me using Sun Wireless Toolkit platform.",
+        "headline": "",
         "points": [
-          "Was awarded 1<sup>st</sup> position for the product in [Envision](http://www.ecell-iitkgp.org/envision.php), Product Innovation Contest, IIT KGP.",
-          "Was awarded 1<sup>st</sup> position for the product in Javawise, J2ME s/w Development Contest at IIT Kharagpur, 2008 and 2009 continuously."
+          "nothin"
         ]
       }]
     }
+  },
+  "vocabulary": {
+    "summary": "自我评价",
+    "frontEnd": "前端",
+    "backEnd": "后台",
+    "skill": "技能",
+    "education": "学习经历",
+    "project_experience": "项目经历",
+    "acad_achievements": "获奖经历",
+    "thanks_words": "感谢您花时间阅读我的简历，期待能有机会和您共事。"
   }
 }

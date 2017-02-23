@@ -1,66 +1,42 @@
 {
+  "language":"en",
   "settings": {
     "icons": true
   },
+  "page_title": "Tao Kai(陶楷) | Resume",
   "name": "Tao Kai",
+  "apply_for":"Front-End Software Engineer",
   "bio_data": {
     "website": "heitaov.cn",
     "blog": "vankai.github.io",
     "email": "mr.taokai@foxmail.com",
     "phone": "(+86) 1888-399-2128",
     "gender": "male",
-    "tag": "本科 2018应届毕业生",
-    "age": 22,
+    "tag": "will graduate in 2018",
+    "birth_year":1995,
     "summary": {
       "points": [
-        "ENFJ-A, an insatiable bookworm.",
-        "高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧，喜欢字体以及其他手工艺作品。",
-        "个人博客如果无法访问，可以访问tomato3.coding.net，博客内容暂未开始更新，主要是想写一些「长半衰期」的文章，而不是像老太太裹脚布一样的技术备忘录。"
-      ]
-    },
-    "github_projects": {
-      "details": [{
-          "project_name": "hexo-theme-ambition",
-          "tagline": "",
-          "description": [
-            "Wrote a ruby gem _Morsel_ to traverse through active record trees to purge old records. It helped in limiting the production database size and keeping the data clean."
-          ]
-        },
-        {
-          "project_name": "prat0318/gitator",
-          "tagline": "Live at [Gitator.com](http://gitator.com)",
-          "description": [
-            "Finds relevant repositories based on an user's GitHub profile.",
-            "Written in Ruby on Sinatra and uses Github's Octokit gem"
-          ]
-        },
-        {
-          "project_name": "prat0318/json_resume",
-          "tagline": "Convert JSON data to pretty resumes in .html, .tex, .md",
-          "description": [
-            "Static personal page and resume design using Mustache.",
-            "Current resume is generated using json_resume."
-          ]
-        }
+        "ENFJ-A, an insatiable bookworm. ",
+        "When I was in senior high school, I had translated a calligraphy handbook(Palmer Method 1935) in to Chinese, which was first shared in Cursive of Baidu Post Bar; ",
+        "I'm taking a craftsman's heart to design and develop web applications, dreamming to become a software engineer for spacecraft."
       ]
     },
     "skills": {
       "frontEnd": [
-        "掌握 Javascript/HTML5/CSS3 ，能熟练使用原生 Javascript 开发应用",
-        "了解 jQuery/RequireJS 等库文件",
-        "了解 less/stylus/pug 预编译工具",
-        "了解 gulp/bower 构建工具",
-        "能够对前端页面进行性能优化",
-        "了解 简单安卓程序开发",
-        "了解 Progressive Web Application 技术",
-        "了解 git/linux 日常操作"
+        "master Javascript/HTML5/CSS3; Can using pure Javascript to develop applications; ",
+        "learnt jQuery/RequireJS/",
+        "less/stylus/pug/",
+        "gulp/bower; ",
+        "optimize performance; ",
+        "Android newbie developer;",
+        "learnt some Progressive Web Application tech; ",
+        "No problem with git&linux daily use; "
 
       ],
       "backEnd": [
-        "了解 Nodejs/JAVA",
-        "了解 Express/Struts2",
-        "了解 MySQL/MongoDB",
-        "了解 HTTP/TCP/WebSocket 协议"
+        "learnt Nodejs/JAVA; ",
+        "have used Express/Struts2/MySQL/MongoDB; ",
+        "known some HTTP/TCP/WebSocket protocal"
       ],
       "others": [
         "git/linux 常用操作",
@@ -71,9 +47,9 @@
     "education": {
       "show_gpa": false,
       "schools": [{
-        "degree": "本科毕业生",
-        "major": "软件工程专业",
-        "institution": "重庆邮电大学",
+        "degree": "Bachelor of Engineering",
+        "major": "Software Engineering",
+        "institution": "Chongqing University of Posts and Telecommunications",
         "first_year": 2014,
         "first_month": 9,
         "graduation_year": 2018,
@@ -83,24 +59,24 @@
     },
     "acad_achievements": {
       "items": [
-        "2016.07    2016伯乐相“码”大陆集团首届代码优化大赛 优秀奖",
-        "2014.07    全（重庆）市大学生“中华魂”读书活动征文比赛二等奖"
+        "Excellence prize of The First Continental Code Optimization University Competition(2016.07)",
+        "Second prize of Chongqing University students \"Chinese soul\" reading activities essay contest(2014.07)"
       ]
     },
     "experience": {
       "items": [{
-        "title": "Hexo主题-ambition",
+        "title": "Hexo Theme Ambition",
         "from": "2016.10",
         "to": "2017.01",
         "details": [
-          "其他的hexo主题自己不是很喜欢，所以就自己写了一个。使用了ServiceWorker增强离线体验，练习了stylus。可访问我的博客查看。"
+          "These hexo themes on the official site are not my tea, that's why I build another theme. Deployed ServiceWorker javascript to provide a better experience while users are offline. Learned stylus. You may visit my blog to see what does it look like."
         ]
       }, {
-        "title": "嗨柚义工旅行官方网站",
+        "title": "HiYouth Volunteer Travel Official Website",
         "from": "2016.03",
         "to": "2016.07",
         "details": [
-          "使用jQuery/RequireJS完成网站开发。第一周，我负责切图，第二周参与交互逻辑的开发与调试，第三周结束时网站上线测试并调试api。第四周，将原本的PC端网站改为响应式网站。后续又在登录页添加QQ互联接口。"
+          "Developed the whole site with jQuery/RequireJS technologies. In the 1st week, I'm in charged of slicing PSD into HTML. In the 2nd week, I'm involved in logic coding and debugging. At the end of the 3rd week, we debuged the API of the server. In the 4th week, I'm taking charged of making the website into responsable design. Later, added QQ link API on the login page."
         ],
         "technology_used": {
           "tools": [
@@ -120,5 +96,15 @@
         ]
       }]
     }
+  },
+   "vocabulary": {
+    "summary": "Summary",
+    "frontEnd": "Front-End",
+    "education":"Education",
+    "backEnd": "Back-End",
+    "skill": "Skill List",
+    "project_experience": "Projects Involved",
+    "acad_achievements": "Rewards Events",
+    "thanks_words": "Thanks for taking the time to read my resume and look forward to have the opportunity to work with you."
   }
 }

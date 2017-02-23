@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-html(lang="zh")
+html(lang=language)
   head
     link(rel="shortcut icon" href="favicon.png" type="image/x-icon" )
     meta(charset="UTF-8")
-    title 陶楷 | 简历
+    title!=page_title
     link(href="index.css", rel="stylesheet")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
 body
-  .container
+  
+  div(class=language+"-version").container
     .languages.screen-only
       a(href="index.html") 中文
       =" "
       a(href="index-en.html") English
     .header
       .left
-        h1.name #{name} 
-        p #{bio_data.gender} #{bio_data.age} | #{bio_data.tag}
         -var school = bio_data.education.schools[0];
+        h1.name #{name} 
+        p #{bio_data.gender} #{new Date().getFullYear()-bio_data.birth_year} | #{bio_data.tag}
+          if(language ==="en")
+            =" "
+            span with degree of #{school.degree}
+          endif
         p #{school.institution}·#{school.major}
       .right
-        h2.role Web前端工程师
+        h2.role=apply_for
         p
           a(href="//"+bio_data.website target="_blank") #{bio_data.website}
             i.i-home
@@ -33,7 +38,7 @@ body
             i.i-email 
     .project.box
       .title 
-        h2 项目经历
+        h2=vocabulary.project_experience
       ul.content.projects
         each project in bio_data.experience.items
           li
@@ -45,11 +50,12 @@ body
                   li #{detail}
     .skill.box
       .title 
-        h2 个人技能
+        h2=vocabulary.skill
       .content.song
+      if(language =="zh")
         .skill-dir
-          h4 前端
-          h4.right.aligned 后台
+          h4= vocabulary.frontEnd
+          h4.right.aligned=vocabulary.backEnd
         .skill-list
           .frontEnd
             each skill in bio_data.skills.frontEnd
@@ -57,21 +63,33 @@ body
           .backEnd
             each skill in bio_data.skills.backEnd
               p.right.aligned!= skill  
-      
+      else
+        h4= vocabulary.frontEnd
+        .frontEnd
+          p
+          each skill in bio_data.skills.frontEnd
+            != skill  
+        h4=vocabulary.backEnd
+        .backEnd
+          p 
+          each skill in bio_data.skills.backEnd
+            != skill  
     .award.box
       .title 
-        h2 获奖情况
+        h2= vocabulary.acad_achievements
       .content.song
       each award in bio_data.acad_achievements.items
         p.song=award
       
     .judge.box
       .title 
-        h2 自我评价
+        h2= vocabulary.summary
       .content.song
-        p ENFJ-A，喜欢看书，CET-4，可流畅阅读英文技术教程。高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧。以一个手艺人的心态去设计与开发，梦想成为航天器工程师。
+        p
+        each point in bio_data.summary.points
+          =point
       
-    h2.thanks.song 感谢您花时间阅读我的简历，期待能有机会和您共事。
+    h2.thanks.song= vocabulary.thanks_words
     .download.screen-only
       a(href='./resume.pdf' download="【前端】简历-陶楷-2018本科应届.pdf") 下载中文简历
       = ' '
