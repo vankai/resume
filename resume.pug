@@ -6,99 +6,98 @@ html(lang=language)
     title!=page_title
     link(href="index.css", rel="stylesheet")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-body
-  
-  div(class=language+"-version").container
-    .languages.screen-only
-      a(href="index.html") 中文
-      =" "
-      a(href="index-en.html") English
-    .header
-      .left
-        -var school = bio_data.education.schools[0];
-        h1.name #{name} 
-        p #{bio_data.gender} #{new Date().getFullYear()-bio_data.birth_year} | #{bio_data.tag}
-          if(language ==="en")
-            =" "
-            span with degree of #{school.degree}
-          endif
-        p #{school.institution}·#{school.major}
-      .right
-        h2.role=apply_for
-        p
-          a(href="//"+bio_data.website target="_blank") #{bio_data.website}
-            i.i-home
-        p 
-          a(href="//"+bio_data.blog target="_blank") #{bio_data.blog}
-            i.i-blog
-        p #{bio_data.phone}
-          i.i-phone 
-        p 
-          a(href="mailto:"+bio_data.email) #{bio_data.email}
-            i.i-email 
-    .project.box
-      .title 
-        h2=vocabulary.project_experience
-      ul.content.projects
-        each project in bio_data.experience.items
-          li
-            .time #{project.from} - #{project.to}
-            .words
-              h3 #{project.title}
-              ul.details.song 
-                each detail in project.details
-                  li #{detail}
-    .skill.box
-      .title 
-        h2=vocabulary.skill
-      .content.song
-      if(language =="zh")
-        .skill-dir
-          h4= vocabulary.frontEnd
-          h4.right.aligned=vocabulary.backEnd
-        .skill-list
-          .frontEnd
-            each skill in bio_data.skills.frontEnd
-              p!= skill  
-          .backEnd
-            each skill in bio_data.skills.backEnd
-              p.right.aligned!= skill  
-      else
-        h4= vocabulary.frontEnd
-        .frontEnd
+  body
+    div(class=language+"-version").container
+      .languages.screen-only
+        a(href="index.html") 中文
+        =" "
+        a(href="index-en.html") English
+      .header
+        .left
+          -var school = bio_data.education.schools[0];
+          h1.name #{name} 
+          p #{bio_data.gender} #{new Date().getFullYear()-bio_data.birth_year} | #{bio_data.tag}
+            if(language ==="en")
+              =" "
+              span with degree of #{school.degree}
+            endif
+          p #{school.institution}·#{school.major}
+        .right
+          h2.role=apply_for
           p
-          each skill in bio_data.skills.frontEnd
-            != skill  
-        h4=vocabulary.backEnd
-        .backEnd
+            a(href="//"+bio_data.website target="_blank") #{bio_data.website}
+              i.i-home
           p 
-          each skill in bio_data.skills.backEnd
-            != skill  
-    .award.box
-      .title 
-        h2= vocabulary.acad_achievements
-      .content.song
-      each award in bio_data.acad_achievements.items
-        p.song=award
-      
-    .judge.box
-      .title 
-        h2= vocabulary.summary
-      .content.song
-        p
-        each point in bio_data.summary.points
-          =point
-      
-    h2.thanks.song= vocabulary.thanks_words
-    .download.screen-only
-      a(href='./resume.pdf' download="【前端】简历-陶楷-2018本科应届.pdf") 下载中文简历
-      = ' '
-      a(href='./resume-en.pdf' download="[Resume]taokai-front-End-2018-graduated-bachelor.pdf") Download Resume
-  
-  script.
-    if('serviceWorker' in navigator){
-      if(window.location.protocol ==="https:" || window.location.hostname ==="localhost" && window.location.hash === "#sw"){
-         navigator.serviceWorker.register('./sw.js');
+            a(href="//"+bio_data.blog target="_blank") #{bio_data.blog}
+              i.i-blog
+          p #{bio_data.phone}
+            i.i-phone 
+          p 
+            a(href="mailto:"+bio_data.email) #{bio_data.email}
+              i.i-email 
+      .project.box
+        .title 
+          h2=vocabulary.project_experience
+        ul.content.projects
+          each project in bio_data.experience.items
+            li
+              .time #{project.from} - #{project.to}
+              .words
+                h3 #{project.title}
+                ul.details.song 
+                  each detail in project.details
+                    li #{detail}
+      .skill.box
+        .title 
+          h2=vocabulary.skill
+        .content.song
+        if(language =="zh")
+          .skill-dir
+            h4= vocabulary.frontEnd
+            h4.right.aligned=vocabulary.backEnd
+          .skill-list
+            .frontEnd
+              each skill in bio_data.skills.frontEnd
+                p!= skill  
+            .backEnd
+              each skill in bio_data.skills.backEnd
+                p.right.aligned!= skill  
+        else
+          h4= vocabulary.frontEnd
+          .frontEnd
+            p
+            each skill in bio_data.skills.frontEnd
+              != skill  
+          h4=vocabulary.backEnd
+          .backEnd
+            p 
+            each skill in bio_data.skills.backEnd
+              != skill  
+      .award.box
+        .title 
+          h2= vocabulary.acad_achievements
+        .content.song
+        each award in bio_data.acad_achievements.items
+          p.song=award
+        
+      .judge.box
+        .title 
+          h2= vocabulary.summary
+        .content.song
+          p
+          each point in bio_data.summary.points
+            =point
+        
+      h2.thanks.song= vocabulary.thanks_words
+      .download.screen-only
+        a(href='./resume.pdf' download="【前端】简历-陶楷-2018本科应届.pdf") 下载中文简历
+        = ' '
+        a(href='./resume-en.pdf' download="[Resume]taokai-front-End-2018-graduated-bachelor.pdf") Download Resume
+    
+    script.
+      if('serviceWorker' in navigator){
+        if(window.location.protocol ==="https:" || window.location.hostname ==="localhost" && window.location.hash === "#sw"){
+          navigator.serviceWorker.register('./sw.js');
+        }
       }
-    }
-  
+    
