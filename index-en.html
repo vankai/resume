@@ -1,5 +1,22 @@
 <!DOCTYPE html><html lang="en"><head><link rel="shortcut icon" href="favicon.png" type="image/x-icon"/><meta charset="UTF-8"/><title>Tao Kai(陶楷) | Resume</title><link href="index.css" rel="stylesheet"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/></head><body><div class="en-version container"><div class="languages screen-only"><a href="index.html">中文</a> <a href="index-en.html">English</a></div><div class="header"><div class="left"><h1 class="name">Tao Kai </h1><p>male 22 | will graduate in 2018 <span>with degree of Bachelor of Engineering</span><endif></endif></p><p>Chongqing University of Posts and Telecommunications·Software Engineering</p></div><div class="right"><h2 class="role">Front-End Software Engineer</h2><p><a href="//heitaov.cn" target="_blank">heitaov.cn<i class="i-home"></i></a></p><p> <a href="//vankai.github.io" target="_blank">vankai.github.io<i class="i-blog"></i></a></p><p>(+86) 1888-399-2128<i class="i-phone"> </i></p><p> <a href="mailto:mr.taokai@foxmail.com">mr.taokai@foxmail.com<i class="i-email"> </i></a></p></div></div><div class="project box"><div class="title"> <h2>Projects Involved</h2></div><ul class="content projects"><li><div class="time">2016.10 - 2017.01</div><div class="words"><h3>Hexo Theme Ambition</h3><ul class="details song"> <li>These hexo themes on the official site are not my tea, that's why I build another theme. Deployed ServiceWorker javascript to provide a better experience while users are offline. Learned stylus. You may visit my blog to see what does it look like.</li></ul></div></li><li><div class="time">2016.03 - 2016.07</div><div class="words"><h3>HiYouth Volunteer Travel Official Website</h3><ul class="details song"> <li>Developed the whole site with jQuery/RequireJS technologies. In the 1st week, I'm in charged of slicing PSD into HTML. In the 2nd week, I'm involved in logic coding and debugging. At the end of the 3rd week, we debuged the API of the server. In the 4th week, I'm taking charged of making the website into responsable design. Later, added QQ link API on the login page.</li></ul></div></li></ul></div><div class="skill box"><div class="title"> <h2>Skill List</h2></div><div class="content song"></div><h4>Front-End</h4><div class="frontEnd"><p></p>master Javascript/HTML5/CSS3; Can using pure Javascript to develop applications; learnt jQuery/RequireJS/less/stylus/pug/gulp/bower; optimize performance; Android newbie developer;learnt some Progressive Web Application tech; No problem with git&linux daily use; </div><h4>Back-End</h4><div class="backEnd"><p> </p>learnt Nodejs/JAVA; have used Express/Struts2/MySQL/MongoDB; known some HTTP/TCP/WebSocket protocal</div></div><div class="award box"><div class="title"> <h2>Rewards Events</h2></div><div class="content song"></div><p class="song">Excellence prize of The First Continental Code Optimization University Competition(2016.07)</p><p class="song">Second prize of Chongqing University students &quot;Chinese soul&quot; reading activities essay contest(2014.07)</p></div><div class="judge box"><div class="title"> <h2>Summary</h2></div><div class="content song"><p></p>ENFJ-A, an insatiable bookworm. When I was in senior high school, I had translated a calligraphy handbook(Palmer Method 1935) in to Chinese, which was first shared in Cursive of Baidu Post Bar; I'm taking a craftsman's heart to design and develop web applications, dreamming to become a software engineer for spacecraft.</div></div><h2 class="thanks song">Thanks for taking the time to read my resume and look forward to have the opportunity to work with you.</h2><div class="download screen-only"><a href="./resume.pdf" download="【前端】简历-陶楷-2018本科应届.pdf">下载中文简历</a> <a href="./resume-en.pdf" download="[Resume]taokai-front-End-2018-graduated-bachelor.pdf">Download Resume</a></div></div><script>if('serviceWorker' in navigator){
-  if(window.location.protocol ==="https:" || window.location.hostname ==="localhost" && window.location.hash === "#sw"){
-    navigator.serviceWorker.register('./sw.js');
-  }
-}</script></body></html>
+
+  navigator.serviceWorker.register('./sw.js');
+  navigator.serviceWorker.ready.then(function(re){
+    re.active.onmessage = (e)=>{
+      console.log("active");
+    }
+    navigator.serviceWorker.controller.onmessage = function (e){
+      console.log(e);
+    }
+    console.log(navigator.serviceWorker.controller === re.active);
+  });
+//-   window.serviceWorker.onMessage = function(e) {
+//-   resolve(e.data);
+//- };
+}
+var wrok = new Worker('./sw2.js');
+console.log(wrok);
+window.onmessage = function(e){
+    console.log(e);
+}
+console.log("123")</script></body></html>

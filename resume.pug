@@ -46,7 +46,7 @@ html(lang=language)
                 h3 #{project.title}
                 ul.details.song 
                   each detail in project.details
-                    li #{detail}
+                    li!=detail
       .skill.box
         .title 
           h2=vocabulary.skill
@@ -96,8 +96,26 @@ html(lang=language)
     
     script.
       if('serviceWorker' in navigator){
-        if(window.location.protocol ==="https:" || window.location.hostname ==="localhost" && window.location.hash === "#sw"){
-          navigator.serviceWorker.register('./sw.js');
-        }
+  
+        navigator.serviceWorker.register('./sw.js');
+        navigator.serviceWorker.ready.then(function(re){
+          re.active.onmessage = (e)=>{
+            console.log("active");
+          }
+          navigator.serviceWorker.controller.onmessage = function (e){
+            console.log(e);
+          }
+          console.log(navigator.serviceWorker.controller === re.active);
+        });
+      //-   window.serviceWorker.onMessage = function(e) {
+      //-   resolve(e.data);
+      //- };
       }
+      var wrok = new Worker('./sw2.js');
+      console.log(wrok);
+      window.onmessage = function(e){
+          console.log(e);
+      }
+      console.log("123")
+      
     
