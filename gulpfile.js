@@ -1,3 +1,4 @@
+var fs = require('fs');
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
@@ -6,9 +7,21 @@ var plumber = require('gulp-plumber');
 
 var browserSync = require('browser-sync').create();;
 var reload = browserSync.reload;
+var chineseFile = "./chinese.json";
+var englishFile = './english.json';
 
-var chineseR = require('./chinese.json');
-var englishR = require('./english.json');
+var chineseR = JSON.parse(fs.readFileSync(chineseFile));
+var englishR = JSON.parse(fs.readFileSync(englishFile));
+
+gulp.watch(chineseFile, function (fn) {
+  chineseR = JSON.parse(fs.readFileSync(chineseFile));
+  return gulp.start('html:zh')
+
+})
+gulp.watch(englishFile, function (fn) {
+  englishR = JSON.parse(fs.readFileSync(englishFile));
+  return gulp.start('html:en')
+})
 
 gulp.task('html:zh', function buildHTML() {
   return gulp
@@ -55,8 +68,10 @@ gulp.task('browser-sync', function () {
     }
   });
 
-  gulp.watch(['./index.html','./index-en.html'], reload);
-  gulp.watch('./resume.pug', ['html:zh','html:en'])
+  gulp.watch([
+    './index.html', './index-en.html'
+  ], reload);
+  gulp.watch('./resume.pug', ['html:zh', 'html:en'])
   gulp.watch('./resume.styl', ['stylus'])
 });
-gulp.task('default', ['stylus', 'html:zh','html:en', 'browser-sync']);
+gulp.task('default', ['stylus', 'html:zh', 'html:en', 'browser-sync']);

@@ -7,8 +7,13 @@ body
 song()
   font-family: Georgia,"Times New Roman","FangSong","仿宋","STFangSong", "华文仿宋",serif
 
-
-
+body
+  position: relative
+clearfix()
+  &:after
+    content:""
+    display: table
+    clear:both
 
 @media print
   .song
@@ -80,54 +85,85 @@ song()
 
 .box
   position: relative
-  .title
-    h2
-      color: white
-      background-color: black;
+  >.title
+    >h2
+      color: black;
       //font-weight: 400
-      padding: .3em .6em;
+      border-bottom: 2px solid #fff500;
+      padding: .3em  0 ;
       margin: 0
 //    project
+// ul.projects
+//   position: relative
+//   padding: 0
+//   margin: 0
+//   list-style: none
+//   clearfix()
+//   >li
+//     float: left;  
+//     width: 50%
+//   >h3
+//     font-weight: 400
+//   .details
+//     padding-left: 0
+//     list-style: none
 ul.projects
   position: relative
-  padding-left: 0
+  padding: .5em 0
+  margin: 0
   list-style: none
-  li
-    position: relative
-  .time
-    position: absolute
-    width: 160px
-    left: 5px
-    top: 3px
-  .words
-    margin-left: 160px
-    h3
-      font-weight: 400
-ul.details
-  padding-left: 0
-  list-style: none
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari 和 Chrome */
+  column-count:2;
+  clearfix()
+  >li
+    //float: left;  
+    //width: 50%
+    >h3
+      margin-top: 0
+      >span.h3
+        display: block;
+        position: relative
+        &:before
+          content:""
+          width: 3em
+          height: 3px;
+          background-color: #fff500
+          position: absolute
+          left: 0
+          bottom: -6px;
+  .details
+    padding-left: 0
+    list-style: none
 
-
+  
 b
   font-weight: bolder
   padding: 3px 5px
 //////////////////////////////////  
 //     skills
 ///////////////////////
-.skill-dir
-  display: flex
-  border: 1px solid black
-  padding: 0 3px 3px
-  h4
-    flex: 1;
-    margin: 0
-.skill-list
-  display: flex
-  .backEnd
-  .frontEnd
-    flex: 1;
-    p
-      margin: 3px 0
+.skill.box
+  .content
+    -moz-column-count:2; /* Firefox */
+    -webkit-column-count:2; /* Safari 和 Chrome */
+    column-count:2;
+    padding:  1em
+
+ul.skill-list
+  list-style: disc
+  position: relative
+  margin: 0;
+  &:after
+    content: ""
+    display: table
+    clear: both
+  >li
+    //width: 50%;
+    //height: 21px;
+    //float: left;
+    //box-sizing: border-box
+    //padding-right: 2em;
 
 
 .right.aligned
@@ -136,13 +172,6 @@ b
 //////////////////////////////
 //    thanks
 ////////////////////////////
-.thanks
-  position: absolute
-  left 0
-  right  0
-  text-align: center
-  bottom: 1em
-  song()
 
 .languages
   text-align: right
@@ -158,12 +187,6 @@ b
     color #03A9F4
 
 .en-version
-  .title
-    h2
-      background-color: transparent
-      color black
-      text-decoration underline
-      padding: 0
   ul.projects .words h3
       font-weight: bold
       margin: .5em 0
@@ -176,4 +199,12 @@ b
     song();
 
   
-
+.last-update
+  position: absolute;
+  // text-decoration: underline
+  width 100%
+  //bottom:50vh;
+  bottom:1em;
+  left: 0
+  text-align: center
+  //transform: rotateZ(90deg)

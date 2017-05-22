@@ -41,45 +41,29 @@ html(lang=language)
         ul.content.projects
           each project in bio_data.experience.items
             li
-              .time #{project.from} - #{project.to}
-              .words
-                h3 #{project.title}
-                ul.details.song 
-                  each detail in project.details
-                    li!=detail
+              h3 #{project.from} - #{project.to} <br>
+                span.h3 #{project.title}
+              ul.details.song 
+                each detail in project.details
+                  li
+                    p!=detail
       .skill.box
         .title 
           h2=vocabulary.skill
         .content.song
-        if(language =="zh")
-          .skill-dir
-            h4= vocabulary.frontEnd
-            h4.right.aligned=vocabulary.backEnd
-          .skill-list
-            .frontEnd
+          ul.skill-list
               each skill in bio_data.skills.frontEnd
-                p!= skill  
-            .backEnd
+                li!= skill  
               each skill in bio_data.skills.backEnd
-                p.right.aligned!= skill  
-        else
-          h4= vocabulary.frontEnd
-          .frontEnd
-            p
-            each skill in bio_data.skills.frontEnd
-              != skill  
-          h4=vocabulary.backEnd
-          .backEnd
-            p 
-            each skill in bio_data.skills.backEnd
-              != skill  
-      .award.box
-        .title 
-          h2= vocabulary.acad_achievements
-        .content.song
-        each award in bio_data.acad_achievements.items
-          p.song=award
-        
+                li!= skill  
+
+      if(language =="en") 
+        .award.box
+          .title 
+            h2= vocabulary.acad_achievements
+          .content.song
+          each award in bio_data.acad_achievements.items
+            p.song=award
       .judge.box
         .title 
           h2= vocabulary.summary
@@ -88,17 +72,19 @@ html(lang=language)
           each point in bio_data.summary.points
             =point
         
-      h2.thanks.song= vocabulary.thanks_words
       .download.screen-only
         a(href='./resume.pdf' download="【前端】简历-陶楷-2018本科应届.pdf") 下载中文简历
         = ' '
         a(href='./resume-en.pdf' download="[Resume]taokai-front-End-2018-graduated-bachelor.pdf") Download Resume
-    
+    .last-update
+      p - Last Modified: 2017/05/22 -
     script.
       if('serviceWorker' in navigator){
-  
-        navigator.serviceWorker.register('./sw.js');
-        navigator.serviceWorker.ready.then(function(re){
+        if(window.location.host === "localhost:9002"){
+          
+        }else{
+          navigator.serviceWorker.register('./sw2.js');
+          navigator.serviceWorker.ready.then(function(re){
           re.active.onmessage = (e)=>{
             console.log("active");
           }
@@ -107,15 +93,8 @@ html(lang=language)
           }
           console.log(navigator.serviceWorker.controller === re.active);
         });
-      //-   window.serviceWorker.onMessage = function(e) {
-      //-   resolve(e.data);
-      //- };
+        }
+        
       }
-      var wrok = new Worker('./sw2.js');
-      console.log(wrok);
-      window.onmessage = function(e){
-          console.log(e);
-      }
-      console.log("123")
       
     

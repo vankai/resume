@@ -3,8 +3,8 @@
   "settings": {
     "icons": true
   },
-  "page_title": "Tao Kai(陶楷) | Resume",
-  "name": "Tao Kai",
+  "page_title": "Kai Tao(陶楷) | Resume",
+  "name": "Kai Tao",
   "apply_for":"Front-End Software Engineer",
   "bio_data": {
     "website": "heitaov.cn",
@@ -23,26 +23,22 @@
     },
     "skills": {
       "frontEnd": [
-        "master Javascript/HTML5/CSS3; Can using pure Javascript to develop applications; ",
-        "learnt jQuery/RequireJS/",
-        "less/stylus/pug/",
+        "Master Javascript/HTML5/CSS3; Can using pure Javascript to develop applications.",
+        "jQuery/RequireJS.",
+        "less/stylus/pug.",
         "gulp/bower; ",
-        "optimize performance; ",
-        "Android newbie developer;",
-        "learnt some Progressive Web Application tech; ",
-        "No problem with git&linux daily use; "
+        "Optimize performance; ",
+        "Android newbie developer.",
+        "Progressive Web Application tech. ",
+        "No problem with Git&Linux for daily use."
 
       ],
       "backEnd": [
-        "learnt Nodejs/JAVA; ",
+        "Nodejs/JAVA.",
         "have used Express/Struts2/MySQL/MongoDB; ",
-        "known some HTTP/TCP/WebSocket protocal"
-      ],
-      "others": [
-        "git/linux 常用操作",
-        "简单安卓程序开发",
-        "CET-4, 可阅读英文技术教程。"
+        "known some HTTP/TCP/WebSocket protocal."
       ]
+      
     },
     "education": {
       "show_gpa": false,
@@ -54,7 +50,7 @@
         "first_month": 9,
         "graduation_year": 2018,
         "graduation_month": 6,
-        "gpa": "8.91/10"
+        "gpa": "2.3/5"
       }]
     },
     "acad_achievements": {
