@@ -3,6 +3,22 @@ body
    font-family: helvetica, "游ゴシック体", "Hiragino Sans GB", "Microsoft Yahei Light", "Microsoft YaHei", "WenQuanYi Micro Hei", lucida, sans-serif;
    margin: 0
    padding: 0
+   font-size: 16px
+   border: 0
+html 
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
 
 song()
   font-family: Georgia,"Times New Roman","FangSong","仿宋","STFangSong", "华文仿宋",serif
@@ -22,8 +38,18 @@ clearfix()
     display: none  
   b
     font-weight: bolder
+    font-family: sans-serif
     
     padding: 3px 5px
+p
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+
+a,button
+  cursor:pointer;
+
 
 *
   box-sizing: border-box;
@@ -37,12 +63,18 @@ clearfix()
 .header
   position: relative 
   display: flex
+  
   .left
   .right
     flex: 1;
   .left
     song()
-  
+  .portrait
+    width: 180px
+    flex: 0
+    img
+      height: 170px
+      border-radius: 400px
   .right
     text-align: right;
     p

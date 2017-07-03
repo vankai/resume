@@ -13,6 +13,7 @@ html(lang=language)
         =" "
         a(href="index-en.html") English
       .header
+        
         .left
           -var school = bio_data.education.schools[0];
           h1.name #{name} 
@@ -22,6 +23,8 @@ html(lang=language)
               span with degree of #{school.degree}
             endif
           p #{school.institution}·#{school.major}
+        .left.portrait
+          img(src="./photo.jpg")
         .right
           h2.role=apply_for
           p
@@ -68,16 +71,15 @@ html(lang=language)
         .title 
           h2= vocabulary.summary
         .content.song
-          p
-          each point in bio_data.summary.points
-            =point
+        each point in bio_data.summary.points
+          p=point
         
       .download.screen-only
         a(href='./resume.pdf' download="【前端】简历-陶楷-2018本科应届.pdf") 下载中文简历
         = ' '
         a(href='./resume-en.pdf' download="[Resume]taokai-front-End-2018-graduated-bachelor.pdf") Download Resume
     .last-update
-      p - Last Modified: 2017/05/22 -
+      p - Last Modified: 2017/07/03 -
     script.
       if('serviceWorker' in navigator){
         if(window.location.host === "localhost:9002"){
