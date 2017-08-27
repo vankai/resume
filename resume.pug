@@ -12,74 +12,79 @@ html(lang=language)
         a(href="index.html") 中文
         =" "
         a(href="index-en.html") English
-      .header
-        
-        .left
-          -var school = bio_data.education.schools[0];
-          h1.name #{name} 
-          p #{bio_data.gender} #{new Date().getFullYear()-bio_data.birth_year} | #{bio_data.tag}
-            if(language ==="en")
-              =" "
-              span with degree of #{school.degree}
-            endif
-          p #{school.institution}·#{school.major}
-        .left.portrait
-          img(src="./photo.jpg")
-        .right
-          h2.role=apply_for
-          p
-            a(href="//"+bio_data.website target="_blank") #{bio_data.website}
-              i.i-home
-          p 
-            a(href="//"+bio_data.blog target="_blank") #{bio_data.blog}
-              i.i-blog
-          p #{bio_data.phone}
-            i.i-phone 
-          p 
-            a(href="mailto:"+bio_data.email) #{bio_data.email}
-              i.i-email 
-      .project.box
-        .title 
-          h2=vocabulary.project_experience
-        ul.content.projects
-          each project in bio_data.experience.items
-            li
-              h3 #{project.from} - #{project.to} <br>
-                span.h3 #{project.title}
-              ul.details.song 
-                each detail in project.details
-                  li
-                    p!=detail
-      .skill.box
-        .title 
-          h2=vocabulary.skill
-        .content.song
-          ul.skill-list
-              each skill in bio_data.skills.frontEnd
-                li!= skill  
-              each skill in bio_data.skills.backEnd
-                li!= skill  
-
-      if(language =="en") 
-        .award.box
-          .title 
-            h2= vocabulary.acad_achievements
+      .left
+        h2.role=apply_for
+        -var school = bio_data.education.schools[0];
+        h2.name #{name} 
+        p #{school.institution}
+        p #{school.major}
+        p #{bio_data.tag}
+        p #{bio_data.gender} 
+          span.age #{new Date().getFullYear()-bio_data.birth_year}
+          if(language ==="en")
+            =" "
+            span with degree of #{school.degree}
+          endif
+        p #{bio_data.phone}
+        //- p
+        //-   i.i-phone 
+        //-   =bio_data.phone
+        p
+          a(href="//"+bio_data.website target="_blank")
+            i.i-home
+            =bio_data.website
+        p 
+          a(href="//"+bio_data.blog target="_blank") 
+            i.i-blog
+            =bio_data.blog
+        p 
+          a(href="mailto:"+bio_data.email)
+            i.i-email 
+            = bio_data.email
+        .judge.box
+          //- .title 
+          //-   h2= vocabulary.summary
           .content.song
-          each award in bio_data.acad_achievements.items
-            p.song=award
-      .judge.box
-        .title 
-          h2= vocabulary.summary
-        .content.song
-        each point in bio_data.summary.points
-          p=point
+          each point in bio_data.summary.points
+            p=point
+      .right
+        .project.box
+          .title 
+            h2=vocabulary.project_experience
+          ul.content.projects
+            each project in bio_data.experience.items
+              li
+                div.project-title #{project.title}&nbsp;&nbsp;
+                  span #{project.from} - #{project.to} 
+                ul.details.song 
+                  each detail in project.details
+                    li
+                      p!=detail
+        .skill.box
+          .title 
+            h2=vocabulary.skill
+          .content.song
+            ul.skill-list
+                each skill in bio_data.skills.frontEnd
+                  li!= skill  
+                each skill in bio_data.skills.backEnd
+                  li!= skill  
+
+        if(language =="en") 
+          .award.box
+            .title 
+              h2= vocabulary.acad_achievements
+            .content.song
+            each award in bio_data.acad_achievements.items
+              p.song=award
+      
         
       .download.screen-only
         a(href='./resume.pdf' download="【前端】简历-陶楷-2018本科应届.pdf") 下载中文简历
         = ' '
         a(href='./resume-en.pdf' download="[Resume]taokai-front-End-2018-graduated-bachelor.pdf") Download Resume
     .last-update
-      p - Last Modified: 2017/07/03 -
+      p - Last Modified: 2017/08/27 -
     script.
       if('serviceWorker' in navigator){
         if(window.location.host === "localhost:9002"){

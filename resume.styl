@@ -1,15 +1,16 @@
 html
 body
-   font-family: helvetica, "游ゴシック体", "Hiragino Sans GB", "Microsoft Yahei Light", "Microsoft YaHei", "WenQuanYi Micro Hei", lucida, sans-serif;
+   font-family:"PingFang SC", helvetica, "游ゴシック体", "Noto Sans CJK", "Source Han Sans", 'Hiragino Sans GB', 'Microsoft Yahei Light', 'Microsoft YaHei', 'WenQuanYi Micro Hei', "Microsoft Yahei", lucida, sans-serif;
    margin: 0
    padding: 0
-   font-size: 16px
+   font-size: 14px
    border: 0
 html 
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-
+  background-color: #efefef
+  color: #555;
 
 article,
 aside,
@@ -21,7 +22,10 @@ section {
 }
 
 song()
-  font-family: Georgia,"Times New Roman","FangSong","仿宋","STFangSong", "华文仿宋",serif
+  font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif', source-han-serif-sc, '宋体', SimSun, '华文细黑', STXihei, serif
+
+fontDefault()
+  font-family:"PingFang SC", helvetica, "游ゴシック体", "Noto Sans CJK", "Source Han Sans", 'Hiragino Sans GB', 'Microsoft Yahei Light', 'Microsoft YaHei', 'WenQuanYi Micro Hei', "Microsoft Yahei", lucida, sans-serif;
 
 body
   position: relative
@@ -32,15 +36,9 @@ clearfix()
     clear:both
 
 @media print
-  .song
-    song()
   .screen-only
     display: none  
-  b
-    font-weight: bolder
-    font-family: sans-serif
-    
-    padding: 3px 5px
+
 p
   -webkit-margin-before: 1em;
   -webkit-margin-after: 1em;
@@ -50,6 +48,14 @@ p
 a,button
   cursor:pointer;
 
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:link {
+    color: inherit;
+    text-decoration: none;}
 
 *
   box-sizing: border-box;
@@ -59,38 +65,17 @@ a,button
   height: 297mm
   margin: auto
   overflow: hidden
+  // border: 1px solid yellow;
   padding: 0rem 2rem
-.header
-  position: relative 
-  display: flex
-  
-  .left
-  .right
-    flex: 1;
-  .left
-    song()
-  .portrait
-    width: 180px
-    flex: 0
-    img
-      height: 170px
-      border-radius: 400px
-  .right
-    text-align: right;
-    p
-      margin: 8px 0
-    a
-      color: black
-      text-decoration: none
-      border-bottom 1px solid white
-      &:hover
-        border-bottom 1px solid #fff500
+
 .name 
-  font-size: 3em
-  song()
+  font-size: 24px
   margin-bottom: 16px
+  song()
 .role
-  font: 600 24px "Fangsong","simsun";
+  position: relative
+  font: 600 24px 'Source Han Serif SC', 'Source Han Serif', source-han-serif-sc,"source-han-serif","Fangsong","simsun";
+
 
 
 [class^='i-']
@@ -102,7 +87,7 @@ a,button
   background-position: center center;
   background-repeat: no-repeat
   vertical-align: bottom;
-  margin-left: .5em
+  margin-right: .5em
 .i-phone
   background-image: url(icon/phone.svg) ;
 .i-email
@@ -113,93 +98,56 @@ a,button
   background-image: url(icon/rss.svg) ;
 .i-qq
   background-image: url(icon/qq.png) ;
-
-
-.box
-  position: relative
-  >.title
-    >h2
-      color: black;
-      //font-weight: 400
-      border-bottom: 2px solid #fff500;
-      padding: .3em  0 ;
-      margin: 0
-//    project
-// ul.projects
-//   position: relative
-//   padding: 0
-//   margin: 0
-//   list-style: none
-//   clearfix()
-//   >li
-//     float: left;  
-//     width: 50%
-//   >h3
-//     font-weight: 400
-//   .details
-//     padding-left: 0
-//     list-style: none
-ul.projects
-  position: relative
-  padding: .5em 0
-  margin: 0
-  list-style: none
-  -moz-column-count:2; /* Firefox */
-  -webkit-column-count:2; /* Safari 和 Chrome */
-  column-count:2;
-  clearfix()
-  >li
-    //float: left;  
-    //width: 50%
-    >h3
-      margin-top: 0
-      >span.h3
-        display: block;
-        position: relative
-        &:before
-          content:""
-          width: 3em
-          height: 3px;
-          background-color: #fff500
-          position: absolute
-          left: 0
-          bottom: -6px;
-  .details
-    padding-left: 0
-    list-style: none
-
-  
-b
-  font-weight: bolder
-  padding: 3px 5px
-//////////////////////////////////  
-//     skills
-///////////////////////
-.skill.box
-  .content
-    -moz-column-count:2; /* Firefox */
-    -webkit-column-count:2; /* Safari 和 Chrome */
-    column-count:2;
-    padding:  1em
-
-ul.skill-list
-  list-style: disc
-  position: relative
-  margin: 0;
-  &:after
-    content: ""
-    display: table
-    clear: both
-  >li
-    //width: 50%;
-    //height: 21px;
-    //float: left;
-    //box-sizing: border-box
-    //padding-right: 2em;
-
-
 .right.aligned
   text-align: right
+//////////////////////////////
+//      main
+////////////////////////////
+b 
+  border-bottom: 1px dashed #777;
+  font-weight: normal
+.left
+  float: left;
+  width: 240px;
+.right
+  display: table-cell;
+  padding-top: 55px
+  ul
+    list-style: none;
+    padding: 0
+.box .title
+  margin-bottom: .3em;
+  border-bottom: 2px solid #808080
+  h2
+    margin: .3em 0;
+    font-weight: 900;
+.project-title
+  font-weight: 600
+  &:before
+    content: ''
+    position: absolute
+    left: -18px;
+    background-color: #808080;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px
+    transform: translateY(4px)
+.content.projects
+  position: relative;
+  text-align: justify
+  &:before
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: -14px;
+    top: 0
+    background-color: #808080;
+.skill.box ul 
+  list-style: disc;
+.judge.box
+  padding-right: 34px;
+  text-align: justify
 
 //////////////////////////////
 //    thanks
@@ -229,8 +177,11 @@ ul.skill-list
     font-size: large;
   .song
     song();
+  .judge.box
+    text-align: left
+.zh-version .age:after
+  content:'岁'
 
-  
 .last-update
   position: absolute;
   // text-decoration: underline

@@ -1,11 +1,11 @@
 {
-    "language":"zh",
+  "language": "zh",
   "settings": {
     "icons": true
   },
   "page_title": "陶楷 | 简历",
   "name": "陶楷",
-  "apply_for": "Web前端工程师",
+  "apply_for": "Web前端开发工程师",
   "bio_data": {
     "website": "heitaov.cn",
     "blog": "vankai.github.io",
@@ -13,38 +13,40 @@
     "phone": "1888-399-2128",
     "gender": "男",
     "tag": "本科 2018应届毕业生",
-    "birth_year":1995,
+    "birth_year": 1995,
     "summary": {
       "points": [
-        "ENFJ-A，喜欢看书，CET-4，地球OL困难模式玩家，以读研的心态度过了大学4年。可流畅阅读英文技术教程。高中时曾简单翻译过一本英文书法教程(Palmer Method 1935)，发布于Cursive贴吧。",
-         "做外包并不能多大提高技术水平，所以我花了大量时间深入基础，专心学习学校的软件工程课程。"
+        "ENFJ-A，VIM党（只有终端的话下），喜欢看书，看电影，发散想象力，CET-4(六级402分)。喜欢英文书法，会玩漂移板，希望自己是一半文科一半理科，或者一半虔诚，一半桀骜。",
+        "专注PWA开发。"
       ]
     },
     "experience": {
       "items": [{
-        "title": "WebRTC在线视频聊天",
-        "from": "2017.04",
-        "to": "2017.05",
+        "title": "Hitokoto一言-PWA应用",
+        "from": "2017.07",
+        "site": "http://github.com/vankai/hitokoto-pwa",
+        "to": "至今",
         "details": [
-          "使用浏览器WebRTC接口开发的一个在线视频聊天，只能点对点视频聊天，<b>使用WebSocket作为通信通道传输WebRTC验证信息</b>"
+          "项目地址：https://github.com/vankai/hitokoto-pwa",
+          "这是一个全栈项目，用于随机展示一句话，比如优美的文摘。前端采用了React + Redux + React-router + Dexie + Ant Design开源的动画库，后台使用了restify提供restful接口，mongodb做数据持久化处理。",
+          "使用一个适配器模式，从其他网站支持跨域的接口转换数据并显示。本地的IndexedDB数据库可以使应用在离线情况下正常使用缓存资源，能够存储的数据量可以掏空别人API的数据。"
         ]
-      },{
+      }, {
         "title": "重邮课表——PWA应用",
         "from": "2017.03",
         "to": "2017.03",
         "details": [
-          "<b>技术关键词：Vue-cli + webpack + ServiceWorker + VUE组件 + VueRouter</b>",
-          "从Google I/O 2016大会后通过查阅W3C关于WebWorker以及IndexedDB的文档，阅读MDN上关于PWA的文章，<b>独自开发出了可以在安卓手机上作为本地应用使用的校园课表</b>。",
-          "为了能够<b>离线</b>访问课表数据，在浏览器端使用了<b>IndexedDB</b>和LocalStorage来存储数据，后台在云服务器上部署了一个使用了Express的应用,用cheerio来解析学校网站的课表数据。",
-          "<b>使用了Vue-cli+webpack来开发页面</b>，用了Vue的大部分API，采用了vue格式的组件化开发，大大方便了以后功能拓展。可访问cqupt.heitaov.cn访问试用（账号:2014213792）。"
+          "这是一个PWA应用，用于展示课表，可访问 cqupt.heitaov.cn 试用（账号:2014213792）。该网页应用可以在安卓手机上作为本地应用使用，比微信小程序启动快，<b>饿了么网页手机端正在使用PWA技术</b>。",
+          "使用了Vue-cli+webpack来开发页面，用了Vue的大部分API，<b>采用了vue格式的组件化开发</b>，大大方便了以后功能拓展。。",
+          "在浏览器端使用了<b>IndexedDB</b>和LocalStorage,能够<b>离线</b>访问课表数据，后台在云服务器上部署了一个使用了Express的应用,用cheerio来解析学校网站的课表数据。"
         ]
       }, {
         "title": "嗨柚义工旅行官方网站",
         "from": "2016.03",
         "to": "2016.07",
         "details": [
-          "为了能使官方网站上线，参与了大部分的前端开发工作。<b>纯手编写了一套CSS</b>。为了共用js,<b>使用了RequireJS来组织模块</b>。<b>魔改了一个弹窗模块</b>。",
-          "网站上线后，为了优化网站第一屏访问速度，<b>使用了图片懒加载+CDN</b>；<b>将注册和登录模态独立出去</b>，在需要时才通过Ajax加载。在使用缓存的情况下，网站秒加载。项目拿到了天使投资人上百万投资，创始人已在丽江开了客栈。"
+          "这是一个义工旅行的官方网站，用于客栈和义工之间交流义工招聘信息，项目拿到了天使投资人上百万投资，创始人已在丽江开了客栈。参与了大部分的前端开发工作，<b>纯手编写了一套CSS</b>。为了共用js,<b>使用了RequireJS来组织模块</b>。<b>魔改了一个弹窗模块</b>。",
+          "网站上线后，优化网站第一屏访问速度，<b>使用了图片懒加载+CDN</b>；<b>将注册和登录模态独立出去</b>，在需要时才通过Ajax加载。在使用缓存的情况下，网站秒加载。"
         ],
         "technology_used": {
           "tools": [
@@ -58,7 +60,7 @@
         "from": "2015.06",
         "to": "2015.10",
         "details": [
-          "<b>参与设计了SQL数据表，采用了Vue来展示网站数据</b>，前端使用了AdminLTE框架+JQuery。"
+          "<b>参与设计了MySQL数据表，解决了存储水、电、气和地址的问题</b>，前端使用了AdminLTE框架+JQuery，因操作数据不便，采用了Vue来展示网站数据。"
         ],
         "technology_used": {
           "tools": [
@@ -71,21 +73,21 @@
     },
     "skills": {
       "frontEnd": [
-        "<b>面向过程/对象程序设计和软件文档写作</b>",
-        "<b>完全掌握JS的闭包，原型链等</b>",
-        "Javascript NodeJS JAVA",
-        "能使用预编译工具编译成CSS/html/javascript",
-        "能使用Gulp等<b>自动化工具</b>",
-        "能够对前端页面进行<b>性能优化</b>",
-        "能够开发简单的安卓程序",
-        "掌握<b>Progressive Web Application 技术</b>",
+        "编程框架: ReactJS、Vue",
+        "程序设计：面向过程/对象程序设计和软件文档写作,UML建模",
+        "编程语言：Javascript,NodeJS,JAVA",
+        "预编译工具：less,stylus,pug,ejs,",
+        "代码构建辅助工具：Gulp，webpack",
+        "数据库：MySQL,Oracle,MongoDB<br>",
+        "完全掌握JS的闭包，原型链",
         "Git/Linux 日常操作",
-        "Photoshop"
+        "掌握<b>Progressive Web Application 技术</b>",
+        "能够对前端页面进行<b>性能优化</b>",
+        "Photoshop修图",
+        "了解 HTTP1.1/HTTP2.0/TCP/WebSocket 协议"
 
       ],
-      "backEnd": [
-        "了解 HTTP/TCP/WebSocket 协议"
-      ],
+      "backEnd": [],
       "others": [
         "git/linux 常用操作",
         "<b>简单安卓程序开发</b>",
@@ -111,7 +113,7 @@
         "2014.07    全（重庆）市大学生“中华魂”读书活动征文比赛二等奖"
       ]
     },
-    
+
     "other_projects": {
       "items": [{
         "headline": "",
@@ -127,7 +129,7 @@
     "backEnd": "后台",
     "skill": "技能",
     "education": "学习经历",
-    "project_experience": "项目经历",
+    "project_experience": "项目作品",
     "acad_achievements": "获奖经历",
     "thanks_words": ""
   }
